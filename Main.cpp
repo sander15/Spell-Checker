@@ -11,7 +11,7 @@ using namespace std;
 //All english alphabets
 char lower_alpha[] = { 'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z' };
 //All spanish alphabets
-char spanish_alpha[] = { 'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','é','ñ','á','í','ó','ú' };
+char spanish_alpha[] = { 'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','Ã©','Ã±','Ã¡','Ã­','Ã³','Ãº' };
 //files to use
 string dictionary = "words.txt" "espanol.txt";
 int language = 1;
@@ -244,7 +244,7 @@ int extraCharacter(string input)
     return found;
 }
 
-//function to show right spelling when given word has wrong extra character and right one is missing.
+
 int mixedExtraMissing(string input)
 {
     string Xinput, line, Xline;
@@ -361,7 +361,7 @@ int main()
             words.close();
             if (correct == 1)
             {
-                cout << endl << "Spelling is correct / La ortografía es correcta" << endl;
+                cout << endl << "Spelling is correct / La ortografÃ­a es correcta" << endl;
             }
             if (correct == 0)
             {
@@ -382,7 +382,7 @@ int main()
         {
             cout << "Not able to open / no se pudo abrir (words.txt - espanol.txt)" << endl;
         }
-        cout << endl << "Press any key to check the spelling of another word / Presione cualquier tecla para revisar la ortografía de otra palabra" << endl << endl;
+        cout << endl << "Press any key to check the spelling of another word / Presione cualquier tecla para revisar la ortografÃ­a de otra palabra" << endl << endl;
         _getch();
         system("CLS");
     }
